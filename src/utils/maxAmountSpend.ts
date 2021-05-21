@@ -1,4 +1,4 @@
-import { CurrencyAmount, ETHER, JSBI } from '@sushiswap/sdk'
+import { CurrencyAmount, ETHER, JSBI } from 'bao-sdk'
 import { MIN_ETH } from '../constants'
 
 /**

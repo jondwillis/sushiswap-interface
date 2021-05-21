@@ -1,4 +1,4 @@
-import { Currency, Token } from '@sushiswap/sdk'
+import { Currency, Token } from 'bao-sdk'
 import { ButtonEmpty } from 'components/ButtonLegacy'
 import Card, { OutlineCard } from 'components/CardLegacy'
 import { AutoColumn } from 'components/Column'
