@@ -5721,8 +5721,9 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-bao-sdk@../sushiswap-sdk:
+"bao-sdk@https://github.com/jondwillis/sushiswap-sdk#canary":
   version "5.0.0-canary.7"
+  resolved "https://github.com/jondwillis/sushiswap-sdk#5b5f3f49b7f029718bd110635687ed0083b58939"
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"
