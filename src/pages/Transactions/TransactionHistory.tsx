@@ -36,7 +36,7 @@ export default function TransactionHistory({ transactions }: any) {
                     transactions.map((t: any) => (
                         <div
                             key={t.tx_hash}
-                            className="flex justify-between items-center rounded bg-dark-800 px-3 py-1 mb-3"
+                            className="flex justify-between items-center rounded bg-light-800 px-3 py-1 mb-3"
                         >
                             <div className="flex flex-row space-x-1 items-center">
                                 <div>
@@ -51,7 +51,7 @@ export default function TransactionHistory({ transactions }: any) {
                                     href={getExplorerLink(chainId, t.tx_hash, 'transaction')}
                                     target="_blank"
                                     rel="noreferrer noopener"
-                                    className="flex flex-1 items-center text-sm px-3 py-2 text-primary rounded-lg text-bold bg-dark-900"
+                                    className="flex flex-1 items-center text-sm px-3 py-2 text-primary rounded-lg text-bold bg-light-900"
                                 >
                                     <span className="mr-1">{t.description}</span>
                                     <ArrowUpRight strokeWidth={2} size={14} color={theme.blue1} />

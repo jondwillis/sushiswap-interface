@@ -22,9 +22,9 @@ module.exports = {
                 'pink-red-light-brown': ['#FE5A75', '#FEC464']
             },
             background: {
-                'dark-1000': '#0D0415',
-                'dark-900': '#161522',
-                'dark-800': '#202231',
+                'light-1000': '#45423e',
+                'light-900': '#969189',
+                'light-800': '#fff8ee',
                 'dark-pink-red': '#4e3034'
             },
             border: {
@@ -39,7 +39,7 @@ module.exports = {
             red: '#FF3838',
             blue: '#27B0E6',
             pink: '#FA52A0',
-            purple: '#A755DD',
+            purple: '#e2d6cf',
             green: '#7CFF6B',
 
             'pink-red': '#FE5A75',
@@ -50,20 +50,20 @@ module.exports = {
 
             'dark-pink': '#221825',
             'dark-blue': '#0F182A',
-            'dark-1000': '#0D0415',
-            'dark-950': '#0d0d1f',
-            'dark-900': '#161522',
-            'dark-850': '#1d1e2c',
-            'dark-800': '#202231',
-            'dark-700': '#2E3348',
-            'dark-600': '#1C2D49',
-            'dark-500': '#223D5E',
+            'light-1000': '#ffffff',
+            'light-950': '#f8f4f3',
+            'light-900': '#f0e9e7',
+            'light-850': '#ece3de',
+            'light-800': '#e2d6cf',
+            'light-700': '#d7c8bf',
+            'light-600': '#cab8ad',
+            'light-500': '#bba79b',
 
             // TODO: bad... these are causing issues with text colors
             // 'high-emphesis': '#E3E3E3',
-            primary: '#BFBFBF',
-            secondary: '#7F7F7F',
-            'low-emphesis': '#575757'
+            primary: '#222222',
+            secondary: '#444444',
+            'low-emphesis': '#7F7F7F'
         },
         screens: {
             sm: '480px',
@@ -163,10 +163,10 @@ module.exports = {
             },
             textColor: {
                 ...defaultTheme.textColor,
-                'low-emphesis': '#575757',
-                primary: '#BFBFBF',
-                secondary: '#7F7F7F',
-                'high-emphesis': '#E3E3E3'
+                'low-emphesis': 'rgb(170, 149, 133)',
+                primary: 'rgb(128, 94, 73)',
+                secondary: 'rgb(91, 57, 38)',
+                'high-emphesis': 'rgb(209, 108, 0)'
             },
             backgroundColor: {
                 ...defaultTheme.backgroundColor,
@@ -179,8 +179,14 @@ module.exports = {
                 'pink-glow-hovered': '0px 57px 90px -47px rgba(250, 82, 160, 0.30)',
                 'blue-glow-hovered': '0px 57px 90px -47px rgba(39, 176, 230, 0.34)',
 
-                'swap-blue-glow': '0px 50px 250px -47px rgba(39, 176, 230, 0.29)',
-                'liquidity-purple-glow': '0px 50px 250px -47px rgba(123, 97, 255, 0.23);'
+                'swap-brown-glow': '0px 50px 250px -47px rgba(80, 37, 28, 0.29)',
+                'liquidity-purple-glow': '0px 50px 250px -47px rgba(123, 97, 255, 0.23);',
+
+                'inset-light': 'rgb(247 244 242) 1px 1px 0px inset',
+                'inset-dark': '#a79e99 0px 0px 1px inset',
+                'inset-dark-2': '#a79e99 1px 1px 0px inset'
+
+
             },
             ringWidth: {
                 ...defaultTheme.ringWidth,

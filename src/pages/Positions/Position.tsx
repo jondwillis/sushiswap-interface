@@ -60,14 +60,14 @@ export default function Position({ pair, showUnwrapped = false, stakedBalance }:
     return (
         <>
             <div
-                className="flex justify-between items-center rounded bg-dark-800 px-3 py-3 mt-2"
+                className="flex justify-between items-center rounded bg-light-800 px-3 py-3 mt-2"
                 onClick={() => setShowMore(!showMore)}
             >
                 <DoubleCurrencyLogo currency0={currency0} currency1={currency1} size={30} margin={true} />
                 <div className="flex-1 mr-2 py-2 rounded-lg text-xs md:text-sm md:text-bold text-white">
                     {currency0.getSymbol(chainId)} / {currency1.getSymbol(chainId)}
                 </div>
-                <div className="flex flex-col md:flex-row justify-between flex-1 text-xs md:text-sm px-3 py-2 text-primary rounded-lg md:text-bold bg-dark-900">
+                <div className="flex flex-col md:flex-row justify-between flex-1 text-xs md:text-sm px-3 py-2 text-primary rounded-lg md:text-bold bg-light-900">
                     <div>
                         <span className="text-white">{token0Deposited ? token0Deposited?.toSignificant(6) : '-'}</span>
                         <span className="ml-1">{currency0.getSymbol(chainId)}</span>
@@ -82,7 +82,7 @@ export default function Position({ pair, showUnwrapped = false, stakedBalance }:
                 </div>
             </div>
             {showMore && (
-                <AutoColumn gap="8px" className="bg-dark-800 p-4 -mt-2 mb-2 rounded-b-lg">
+                <AutoColumn gap="8px" className="bg-light-800 p-4 -mt-2 mb-2 rounded-b-lg">
                     <FixedHeightRow>
                         <Text fontSize={16} fontWeight={500}>
                             Your total pool tokens:

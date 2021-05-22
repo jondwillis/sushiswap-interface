@@ -38,7 +38,7 @@ export default function LendingMarkets(): JSX.Element | null {
             netWorth={netWorth}
             left={
                 <Card
-                    className="h-full bg-dark-900"
+                    className="h-full bg-light-900"
                     backgroundImage={DepositGraphic}
                     title={i18n._(t`Lend your assets, earn yield with no impermanent loss`)}
                     description={i18n._(
@@ -47,7 +47,7 @@ export default function LendingMarkets(): JSX.Element | null {
                 />
             }
         >
-            <Card className="bg-dark-900" header={<MarketHeader type="Lending" lists={[pairs, positions]} />}>
+            <Card className="bg-light-900" header={<MarketHeader type="Lending" lists={[pairs, positions]} />}>
                 {positions.items && positions.items.length > 0 && (
                     <div className="pb-4">
                         <div>
@@ -103,7 +103,7 @@ export default function LendingMarkets(): JSX.Element | null {
                                                 to={'/bento/kashi/lend/' + pair.address}
                                                 className="block text-high-emphesis"
                                             >
-                                                <div className="grid gap-4 grid-flow-col grid-cols-4 md:grid-cols-6 lg:grid-cols-7 py-4 px-4 items-center align-center text-sm rounded bg-dark-800 hover:bg-dark-blue">
+                                                <div className="grid gap-4 grid-flow-col grid-cols-4 md:grid-cols-6 lg:grid-cols-7 py-4 px-4 items-center align-center text-sm rounded bg-light-800 hover:bg-dark-blue">
                                                     <div className="flex flex-col sm:flex-row items-start sm:items-center">
                                                         <div className="hidden space-x-2 md:flex">
                                                             <AsyncTokenIcon
@@ -210,7 +210,7 @@ export default function LendingMarkets(): JSX.Element | null {
                                             to={'/bento/kashi/lend/' + String(pair.address).toLowerCase()}
                                             className="block text-high-emphesis"
                                         >
-                                            <div className="grid gap-4 grid-flow-col grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 py-4 px-4 items-center align-center text-sm rounded bg-dark-800 hover:bg-dark-blue">
+                                            <div className="grid gap-4 grid-flow-col grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 py-4 px-4 items-center align-center text-sm rounded bg-light-800 hover:bg-dark-blue">
                                                 <div className="flex flex-col sm:flex-row items-start sm:items-center">
                                                     <div className="hidden space-x-2 md:flex">
                                                         <AsyncTokenIcon

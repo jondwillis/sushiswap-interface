@@ -39,7 +39,7 @@ export default function BorrowMarkets(): JSX.Element {
             netWorth={netWorth}
             left={
                 <Card
-                    className="h-full bg-dark-900"
+                    className="h-full bg-light-900"
                     backgroundImage={BorrowGraphic}
                     title={i18n._(t`Borrow assets and leverage up`)}
                     description={i18n._(
@@ -51,7 +51,7 @@ export default function BorrowMarkets(): JSX.Element {
             <Helmet>
                 <title>{i18n._(t`Borrow`)} | Sushi</title>
             </Helmet>
-            <Card className="h-full bg-dark-900" header={<MarketHeader type="Borrow" lists={[pairs, positions]} />}>
+            <Card className="h-full bg-light-900" header={<MarketHeader type="Borrow" lists={[pairs, positions]} />}>
                 {positions.items && positions.items.length > 0 && (
                     <div className="pb-4">
                         <div>
@@ -108,7 +108,7 @@ export default function BorrowMarkets(): JSX.Element {
                                                 to={'/bento/kashi/borrow/' + pair.address}
                                                 className="block text-high-emphesis"
                                             >
-                                                <div className="grid gap-4 grid-cols-4 md:grid-cols-6 lg:grid-cols-7 py-4 px-4 items-center align-center  text-sm  rounded bg-dark-800 hover:bg-dark-pink">
+                                                <div className="grid gap-4 grid-cols-4 md:grid-cols-6 lg:grid-cols-7 py-4 px-4 items-center align-center  text-sm  rounded bg-light-800 hover:bg-dark-pink">
                                                     <div className="hidden space-x-2 md:flex">
                                                         <AsyncTokenIcon
                                                             address={pair.asset.address}
@@ -210,7 +210,7 @@ export default function BorrowMarkets(): JSX.Element {
                                         to={'/bento/kashi/borrow/' + String(pair.address).toLowerCase()}
                                         className="block text-high-emphesis"
                                     >
-                                        <div className="grid gap-4 grid-cols-4 md:grid-cols-6 lg:grid-cols-7 py-4 px-4 items-center align-center text-sm  rounded bg-dark-800 hover:bg-dark-pink">
+                                        <div className="grid gap-4 grid-cols-4 md:grid-cols-6 lg:grid-cols-7 py-4 px-4 items-center align-center text-sm  rounded bg-light-800 hover:bg-dark-pink">
                                             <div className="flex flex-col sm:flex-row items-start sm:items-center">
                                                 <div className="hidden space-x-2 md:flex">
                                                     <AsyncTokenIcon

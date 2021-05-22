@@ -38,7 +38,7 @@ export default function BentoBalances(): JSX.Element {
             <Layout
                 left={
                     <Card
-                        className="h-full bg-dark-900"
+                        className="h-full bg-light-900"
                         backgroundImage={BentoBoxImage}
                         title={i18n._(t`Deposit tokens into BentoBox for all the yields`)}
                         description={i18n._(
@@ -48,9 +48,9 @@ export default function BentoBalances(): JSX.Element {
                 }
             >
                 <Card
-                    className="h-full bg-dark-900"
+                    className="h-full bg-light-900"
                     header={
-                        <CardHeader className="flex justify-between items-center bg-dark-800">
+                        <CardHeader className="flex justify-between items-center bg-light-800">
                             <div className="flex flex-col md:flex-row items-center justify-between w-full">
                                 <div className="flex items-baseline">
                                     <div className="text-3xl text-high-emphesis mr-4">{i18n._(t`BentoBox`)}</div>
@@ -84,7 +84,7 @@ const TokenBalance = ({ balance }: { balance: BentoBalance }) => {
     const [expand, setExpand] = useState<boolean>(false)
     const { chainId } = useActiveWeb3React()
     return (
-        <Paper className="bg-dark-800 ">
+        <Paper className="bg-light-800 ">
             <div
                 className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm "
                 onClick={() => setExpand(!expand)}

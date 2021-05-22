@@ -157,7 +157,7 @@ export default function Pool() {
             <Helmet>
                 <title>{i18n._(t`Pool`)} | Sushi</title>
             </Helmet>
-            <div className="bg-dark-900 w-full max-w-2xl rounded shadow-liquidity-purple-glow">
+            <div className="bg-light-900 w-full max-w-2xl rounded shadow-liquidity-purple-glow">
                 <ExchangeHeader />
                 <div id="pool-page" className="p-4">
                     <SwapPoolTabs active={'pool'} />
@@ -241,7 +241,7 @@ export default function Pool() {
                             <Button
                                 id="create-pool-button"
                                 color="default"
-                                className="bg-dark-800"
+                                className="bg-light-800"
                                 onClick={() => history.push('/create/ETH')}
                             >
                                 {i18n._(t`Create a pair`)}

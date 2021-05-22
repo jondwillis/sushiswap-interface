@@ -7,7 +7,7 @@ import {
     MAKER_ADDRESS,
     MASTERCHEF_ADDRESS,
     ROUTER_ADDRESS,
-    SUSHI_ADDRESS,
+    BAO_ADDRESS,
     TIMELOCK_ADDRESS,
     WETH
 } from 'bao-sdk'
@@ -165,7 +165,7 @@ export function useMulticallContract(): Contract | null {
 
 export function useSushiContract(withSignerIfPossible = true): Contract | null {
     const { chainId } = useActiveWeb3React()
-    return useContract(chainId && SUSHI_ADDRESS[chainId], SUSHI_ABI, withSignerIfPossible)
+    return useContract(chainId && BAO_ADDRESS[chainId], SUSHI_ABI, withSignerIfPossible)
 }
 
 export function useMasterChefContract(withSignerIfPossible?: boolean): Contract | null {

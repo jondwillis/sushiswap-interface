@@ -119,7 +119,7 @@ const CreatePair = () => {
         <Layout
             left={
                 <Card
-                    className="h-full bg-dark-900"
+                    className="h-full bg-light-900"
                     backgroundImage={DepositGraphic}
                     title={'Create a new Kashi Market'}
                     description={
@@ -132,9 +132,9 @@ const CreatePair = () => {
                 <title>Create Market | Sushi</title>
             </Helmet>
             <Card
-                className="h-full bg-dark-900"
+                className="h-full bg-light-900"
                 header={
-                    <CardHeader className="bg-dark-800">
+                    <CardHeader className="bg-light-800">
                         <div className="text-3xl text-high-emphesis leading-48px">Create a Market</div>
                     </CardHeader>
                 }

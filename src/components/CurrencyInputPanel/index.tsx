@@ -160,7 +160,7 @@ export default function CurrencyInputPanel({
     const valueUSDC = formattedNum(Number(value) * Number(currencyUSDC))
 
     return (
-        <div id={id} className="rounded bg-dark-800 p-5">
+        <div id={id} className="rounded bg-light-800 p-5 shadow-inset-dark">
             <div
                 className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-between"
                 // hideInput={hideInput}
@@ -217,7 +217,7 @@ export default function CurrencyInputPanel({
                                     <CurrencyLogo currency={currency} size={'54px'} />
                                 </div>
                             ) : (
-                                <div className="bg-dark-700 rounded" style={{ maxWidth: 54, maxHeight: 54 }}>
+                                <div className="bg-light-700 rounded" style={{ maxWidth: 54, maxHeight: 54 }}>
                                     <div style={{ width: 54, height: 54 }}>
                                         <Lottie animationData={selectCoinAnimation} autoplay loop />
                                     </div>
@@ -275,7 +275,7 @@ export default function CurrencyInputPanel({
                         </>
                     )} */}
                 </div>
-                <div className="flex items-center rounded bg-dark-900 space-x-3 p-3 w-full sm:w-3/5">
+                <div className="flex items-center rounded bg-light-900 space-x-3 p-3 w-full sm:w-3/5 shadow-inset-light">
                     {!hideInput && (
                         <>
                             {account && currency && showMaxButton && label !== 'To' && (

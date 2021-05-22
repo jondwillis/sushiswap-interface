@@ -125,7 +125,7 @@ export default function FaucetModal() {
                     <TYPE.body color={theme.text1}>Claim your test tokens here...</TYPE.body>
                     <button
                         onClick={claimFaucet}
-                        className="flex items-center bg-dark-800 hover:bg-dark-700 w-full rounded p-3 cursor-pointer mt-5"
+                        className="flex items-center bg-light-800 hover:bg-light-700 w-full rounded p-3 cursor-pointer mt-5"
                     >
                         <div className="text-primary font-bold text-center w-full">Claim</div>
                     </button>

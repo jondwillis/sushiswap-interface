@@ -73,7 +73,7 @@ export function BackButton({ defaultRoute, className }: { defaultRoute: string; 
                     history.goBack()
                 }
             }}
-            className={`flex justify-center items-center p-2 mr-4 rounded-full bg-dark-900 w-12 h-12 ${className ||
+            className={`flex justify-center items-center p-2 mr-4 rounded-full bg-light-900 w-12 h-12 ${className ||
                 ''}`}
         >
             <ChevronLeft className={'w-6 h-6'} />

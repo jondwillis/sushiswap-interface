@@ -171,12 +171,12 @@ export const TYPE = {
 
 export const ThemedGlobalStyle = createGlobalStyle`
 html {
-  color: #BFBFBF;
-  background-color: #0D0415;
+  color: #343434;
+  background-color: #fff8ee;
 }
 
 input, textarea {
-    font-family: "DM Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-display: fallback;
   }
 

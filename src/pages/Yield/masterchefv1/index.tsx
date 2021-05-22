@@ -40,9 +40,9 @@ export default function Yield(): JSX.Element {
             </Helmet>
             <div className="container max-w-2xl mx-auto">
                 <Card
-                    className="h-full bg-dark-900"
+                    className="h-full bg-light-900"
                     header={
-                        <CardHeader className="flex justify-between items-center bg-dark-800">
+                        <CardHeader className="flex justify-between items-center bg-light-800">
                             <div className="flex w-full justify-between">
                                 <div className="hidden md:flex items-center">
                                     {/* <BackButton defaultRoute="/pool" /> */}
@@ -135,7 +135,7 @@ const TokenBalance = ({ farm }: any) => {
     return (
         <>
             {farm.type === 'SLP' && (
-                <Paper className="bg-dark-800">
+                <Paper className="bg-light-800">
                     <div
                         className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm"
                         onClick={() => setExpand(!expand)}
@@ -180,7 +180,7 @@ const TokenBalance = ({ farm }: any) => {
                 </Paper>
             )}
             {farm.type === 'KMP' && (
-                <Paper className="bg-dark-800">
+                <Paper className="bg-light-800">
                     <div
                         className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm"
                         onClick={() => setExpand(!expand)}
@@ -234,7 +234,7 @@ const UserBalance = ({ farm }: any) => {
     return (
         <>
             {farm.type === 'SLP' && (
-                <Paper className="bg-dark-800">
+                <Paper className="bg-light-800">
                     <div
                         className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm"
                         onClick={() => setExpand(!expand)}
@@ -280,7 +280,7 @@ const UserBalance = ({ farm }: any) => {
                 </Paper>
             )}
             {farm.type === 'KMP' && (
-                <Paper className="bg-dark-800">
+                <Paper className="bg-light-800">
                     <div
                         className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm"
                         onClick={() => setExpand(!expand)}

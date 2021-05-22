@@ -45,7 +45,7 @@ export default function BorrowPair({
         <Layout
             left={
                 <Card
-                    className="h-full bg-dark-900"
+                    className="h-full bg-light-900"
                     backgroundImage={BorrowGraphic}
                     title={i18n._(t`Add collateral in order to borrow assets`)}
                     description={i18n._(
@@ -54,7 +54,7 @@ export default function BorrowPair({
                 />
             }
             right={
-                <Card className="h-full bg-dark-900">
+                <Card className="h-full bg-light-900">
                     <div className="flex-col space-y-2">
                         <div className="flex justify-between">
                             <div className="text-xl text-high-emphesis">{i18n._(t`Market Info`)}</div>
@@ -119,7 +119,7 @@ export default function BorrowPair({
                 <title>{i18n._(t`Borrow ${pair?.asset?.symbol}-${pair?.collateral?.symbol}`)}| Sushi</title>
             </Helmet>
             <Card
-                className="h-full bg-dark-900"
+                className="h-full bg-light-900"
                 header={
                     <BorrowCardHeader>
                         <div className="flex items-center">
@@ -187,16 +187,16 @@ export default function BorrowPair({
                     </div>
                 </div>
                 <Tabs forceRenderTabPanel selectedIndex={tabIndex} onSelect={(index: number) => setTabIndex(index)}>
-                    <TabList className="flex rounded bg-dark-800 p-1">
+                    <TabList className="flex rounded bg-light-800 p-1">
                         <Tab
                             className="flex flex-1 justify-center items-center rounded text-lg text-secondary hover:text-primary cursor-pointer focus:outline-none select-none px-3 py-4"
-                            selectedClassName="bg-dark-900 text-high-emphesis"
+                            selectedClassName="bg-light-900 text-high-emphesis"
                         >
                             {i18n._(t`Borrow`)}
                         </Tab>
                         <Tab
                             className="flex flex-1 justify-center items-center rounded text-lg text-secondary hover:text-primary cursor-pointer focus:outline-none select-none px-3 py-4"
-                            selectedClassName="bg-dark-900 text-high-emphesis"
+                            selectedClassName="bg-light-900 text-high-emphesis"
                         >
                             {i18n._(t`Repay`)}
                         </Tab>

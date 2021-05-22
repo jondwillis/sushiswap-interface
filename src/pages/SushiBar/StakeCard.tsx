@@ -38,14 +38,14 @@ const StyledNumericalInput = styled(NumericalInput)`
 
 const tabStyle =
     'flex justify-center items-center h-full w-full rounded-lg cursor-pointer text-caption2 md:text-caption'
-const activeTabStyle = `${tabStyle} text-high-emphesis font-bold bg-dark-900`
+const activeTabStyle = `${tabStyle} text-high-emphesis font-bold bg-light-900`
 const inactiveTabStyle = `${tabStyle} text-secondary`
 
 const buttonStyle =
     'flex justify-center items-center w-full h-14 rounded font-bold md:font-medium md:text-lg mt-5 text-sm focus:outline-none focus:ring'
 const buttonStyleEnabled = `${buttonStyle} text-high-emphesis bg-gradient-to-r from-pink-red to-light-brown hover:opacity-90`
 const buttonStyleInsufficientFunds = `${buttonStyleEnabled} opacity-60`
-const buttonStyleDisabled = `${buttonStyle} text-secondary bg-dark-700`
+const buttonStyleDisabled = `${buttonStyle} text-secondary bg-light-700`
 const buttonStyleConnectWallet = `${buttonStyle} text-high-emphesis bg-cyan-blue hover:bg-opacity-90`
 
 interface StakeCardProps {
@@ -150,8 +150,8 @@ export default function StakeCard({ sushiBalance, xSushiBalance }: StakeCardProp
     return (
         <>
             <TransactionFailedModal isOpen={modalOpen} onDismiss={() => setModalOpen(false)} />
-            <div className="bg-dark-900 shadow-swap-blue-glow w-full max-w-xl pt-2 pb-6 md:pb-9 px-3 md:pt-4 md:px-8 rounded">
-                <div className="flex w-full h-14 bg-dark-800 rounded">
+            <div className="bg-light-900 shadow-swap-brown-glow w-full max-w-xl pt-2 pb-6 md:pb-9 px-3 md:pt-4 md:px-8 rounded">
+                <div className="flex w-full h-14 bg-light-800 rounded">
                     <div
                         className="h-full w-6/12 p-0.5"
                         onClick={() => {
@@ -188,7 +188,7 @@ export default function StakeCard({ sushiBalance, xSushiBalance }: StakeCardProp
                 <StyledNumericalInput
                     value={input}
                     onUserInput={handleInput}
-                    className={`w-full h-14 px-3 md:px-5 mt-5 rounded bg-dark-800 text-caption2 md:text-lg font-bold text-dark-800${
+                    className={`w-full h-14 px-3 md:px-5 mt-5 rounded bg-light-800 text-caption2 md:text-lg font-bold text-light-800${
                         inputError ? ' pl-9 md:pl-12' : ''
                     }`}
                     placeholder=" "

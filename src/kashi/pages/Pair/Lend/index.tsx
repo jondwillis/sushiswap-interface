@@ -35,7 +35,7 @@ export default function LendingPair({
         <Layout
             left={
                 <Card
-                    className="h-full bg-dark-900"
+                    className="h-full bg-light-900"
                     backgroundImage={DepositGraphic}
                     title={i18n._(t`Lend assets for interest from borrowers.`)}
                     description={i18n._(
@@ -44,7 +44,7 @@ export default function LendingPair({
                 />
             }
             right={
-                <Card className="h-full bg-dark-900">
+                <Card className="h-full bg-light-900">
                     <div className="flex-col space-y-2">
                         <div className="flex justify-between">
                             <div className="text-xl text-high-emphesis">{i18n._(t`Market Info`)}</div>
@@ -127,7 +127,7 @@ export default function LendingPair({
                 </title>
             </Helmet>
             <Card
-                className="h-full bg-dark-900"
+                className="h-full bg-light-900"
                 header={
                     <LendCardHeader>
                         <div className="flex items-center">
@@ -188,16 +188,16 @@ export default function LendingPair({
                 </div>
 
                 <Tabs forceRenderTabPanel selectedIndex={tabIndex} onSelect={(index: number) => setTabIndex(index)}>
-                    <TabList className="flex rounded bg-dark-800 p-1">
+                    <TabList className="flex rounded bg-light-800 p-1">
                         <Tab
                             className="flex flex-1 justify-center items-center rounded text-lg text-secondary hover:text-primary cursor-pointer focus:outline-none select-none px-3 py-4"
-                            selectedClassName="bg-dark-900 text-high-emphesis"
+                            selectedClassName="bg-light-900 text-high-emphesis"
                         >
                             Deposit {pair.asset.symbol}
                         </Tab>
                         <Tab
                             className="flex flex-1 justify-center items-center rounded text-lg text-secondary hover:text-primary cursor-pointer focus:outline-none select-none px-3 py-4"
-                            selectedClassName="bg-dark-900 text-high-emphesis"
+                            selectedClassName="bg-light-900 text-high-emphesis"
                         >
                             Withdraw {pair.asset.symbol}
                         </Tab>

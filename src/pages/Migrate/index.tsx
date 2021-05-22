@@ -52,7 +52,7 @@ const AmountInput = ({ state }: { state: MigrateState }) => {
                 <Typography variant="caption" className="text-secondary">
                     Amount of Tokens
                 </Typography>
-                <div className="rounded p-3 bg-dark-800 cursor-not-allowed text-center">
+                <div className="rounded p-3 bg-light-800 cursor-not-allowed text-center">
                     <Typography variant="body" className="text-secondary">
                         {state.mode && state.lpTokens.length === 0 ? 'No LP tokens found' : 'Select an LP Token'}
                     </Typography>
@@ -99,7 +99,7 @@ const LPTokenSelect = ({ lpToken, onToggle, isSelected, updating, exchange }: Po
     return (
         <div
             key={lpToken.address}
-            className="cursor-pointer flex justify-between items-center rounded px-3 py-5 bg-dark-800 hover:bg-dark-700"
+            className="cursor-pointer flex justify-between items-center rounded px-3 py-5 bg-light-800 hover:bg-light-700"
             onClick={() => onToggle(lpToken)}
         >
             <div className="flex items-center space-x-3">
@@ -141,7 +141,7 @@ const MigrateModeSelect = ({ state }: { state: MigrateState }) => {
                     acc.push(
                         <div
                             key={key}
-                            className="cursor-pointer flex justify-between items-center rounded p-3 bg-dark-800 hover:bg-dark-700"
+                            className="cursor-pointer flex justify-between items-center rounded p-3 bg-light-800 hover:bg-light-700"
                             onClick={() => toggleMode(key)}
                         >
                             <div>
@@ -317,7 +317,7 @@ const MigrateV2 = () => {
 
             <div className="text-2xl text-center mb-8">{i18n._(t`Migrate ${exchange} Liquidity`)}</div>
 
-            <div className="bg-dark-900 shadow-swap-blue-glow w-full max-w-lg rounded p-5 space-y-4">
+            <div className="bg-light-900 shadow-swap-brown-glow w-full max-w-lg rounded p-5 space-y-4">
                 {/* <div className="flex justify-between items-center p-3">
                     <BackArrow to="/pool" />
                     <div>Select your wallet</div>

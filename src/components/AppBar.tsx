@@ -1,7 +1,7 @@
 import { ChainId, Currency } from 'bao-sdk'
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import Logo from '../assets/images/logo.png'
+import Logo from '../assets/images/bao3.svg'
 import { useActiveWeb3React } from '../hooks/useActiveWeb3React'
 import { useETHBalances } from '../state/wallet/hooks'
 import { ReactComponent as Burger } from '../assets/images/burger.svg'
@@ -17,6 +17,24 @@ import QuestionHelper from './QuestionHelper'
 import { t } from '@lingui/macro'
 import LanguageSwitch from './LanguageSwitch'
 import { useLingui } from '@lingui/react'
+import styled from 'styled-components'
+
+const TitleText = styled.span`
+	width: fit-content;
+	white-space: nowrap;
+	color: rgb(91, 57, 38);
+    ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    display: none;
+  `};
+	font-family: 'Kaushan Script', sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	letter-spacing: 0.03rem;
+	margin-left: 8px;
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		display: none;
+  `};
+`
 
 function AppBar(): JSX.Element {
     const { i18n } = useLingui()
@@ -46,8 +64,11 @@ function AppBar(): JSX.Element {
                             <div className="flex items-center justify-between h-16">
                                 <div className="flex items-center">
                                     <div className="flex-shrink-0">
-                                        <img src={Logo} alt="Sushi" className="h-10 w-auto" />
+                                        <img src={Logo} alt="Bao" className="h-10 w-auto" />
                                     </div>
+                                    <TitleText>
+										Bao.Finance
+									</TitleText>
                                     <div className="hidden sm:block sm:ml-4">
                                         <div className="flex space-x-2">
                                             <NavLink id={`swap-nav-link`} to={'/swap'}>
@@ -116,7 +137,7 @@ function AppBar(): JSX.Element {
                                     </div>
                                 </div>
 
-                                <div className="flex flex-row items-center justify-center w-full lg:w-auto p-4 fixed left-0 bottom-0 bg-dark-1000 lg:relative lg:p-0 lg:bg-transparent">
+                                <div className="flex flex-row items-center justify-center w-full lg:w-auto p-4 fixed left-0 bottom-0 bg-light-1000 lg:relative lg:p-0 lg:bg-transparent">
                                     <div className="flex items-center justify-between sm:justify-end space-x-2 w-full">
                                         {chainId &&
                                             [ChainId.MAINNET].includes(chainId) &&
@@ -127,7 +148,7 @@ function AppBar(): JSX.Element {
                                                         text={i18n._(t`Add xSushi to your Metamask wallet`)}
                                                     >
                                                         <div
-                                                            className="hidden sm:inline-block rounded-md bg-dark-900 hover:bg-dark-800 cursor-pointer"
+                                                            className="hidden sm:inline-block rounded-md bg-light-900 hover:bg-light-800 cursor-pointer"
                                                             onClick={() => {
                                                                 const params: any = {
                                                                     type: 'ERC20',
@@ -187,7 +208,7 @@ function AppBar(): JSX.Element {
                                                 <>
                                                     <QuestionHelper text={i18n._(t`Add Sushi to your Metamask wallet`)}>
                                                         <div
-                                                            className="hidden sm:inline-block rounded-md bg-dark-900 hover:bg-dark-800 cursor-pointer"
+                                                            className="hidden sm:inline-block rounded-md bg-light-900 hover:bg-light-800 cursor-pointer"
                                                             onClick={() => {
                                                                 let address: string | undefined
                                                                 switch (chainId) {
@@ -256,12 +277,12 @@ function AppBar(): JSX.Element {
                                         {chainId && chainId === ChainId.MATIC && (
                                             <div className="hidden sm:inline-block">
                                                 <a
-                                                    className="flex items-center rounded bg-dark-900 hover:bg-dark-800 p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto"
+                                                    className="flex items-center rounded bg-light-900 hover:bg-light-800 p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto"
                                                     href="https://wallet.matic.network/bridge/"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                 >
-                                                    <div className="grid grid-flow-col auto-cols-max items-center rounded-lg bg-dark-1000 text-sm text-secondary py-2 px-3 pointer-events-auto">
+                                                    <div className="grid grid-flow-col auto-cols-max items-center rounded-lg bg-light-1000 text-sm text-secondary py-2 px-3 pointer-events-auto">
                                                         <div className="text-primary">{i18n._(t`Bridge Assets`)}</div>
                                                     </div>
                                                 </a>
@@ -273,7 +294,7 @@ function AppBar(): JSX.Element {
                                             </div>
                                         )}
 
-                                        <div className="w-auto flex items-center rounded bg-dark-900 hover:bg-dark-800 p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto">
+                                        <div className="w-auto flex items-center rounded bg-light-900 hover:bg-light-800 p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto">
                                             {account && chainId && userEthBalance && (
                                                 <>
                                                     <div className="py-2 px-3 text-primary text-bold">

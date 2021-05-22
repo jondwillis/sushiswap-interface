@@ -131,7 +131,7 @@ export default function LiquidityPositions() {
                         </Button>
                     </Link>
                     <Link to="/create/ETH" className="w-full">
-                        <Button size="large" className="w-full bg-dark-800 text-secondary">
+                        <Button size="large" className="w-full bg-light-800 text-secondary">
                             {i18n._(t`Create a Pair`)}
                         </Button>
                     </Link>

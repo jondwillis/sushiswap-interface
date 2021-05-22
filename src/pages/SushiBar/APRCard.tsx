@@ -36,7 +36,7 @@ export default function APRCard() {
                         rel="noreferrer noopener"
                         className={`
                         py-1 px-4 md:py-1.5 md:px-7 rounded
-                        text-xs md:text-sm font-medium md:font-bold text-dark-900
+                        text-xs md:text-sm font-medium md:font-bold text-light-900
                         bg-light-yellow hover:bg-opacity-90`}
                     >
                         {i18n._(t`View Stats`)}
