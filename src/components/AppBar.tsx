@@ -18,21 +18,27 @@ import { t } from '@lingui/macro'
 import LanguageSwitch from './LanguageSwitch'
 import { useLingui } from '@lingui/react'
 import styled from 'styled-components'
+import KaushanScript from '../assets/fonts/KaushanScript-Regular.ttf'
 
 const TitleText = styled.span`
-	width: fit-content;
-	white-space: nowrap;
-	color: rgb(91, 57, 38);
-    ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+  @font-face {
+    font-family: 'Kaushan Script';
+    src: url(${KaushanScript}) format('truetype');
+  }
+
+  width: fit-content;
+  white-space: nowrap;
+  color: rgb(91, 57, 38);
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+      display: none;
+    `};
+  font-family: 'Kaushan Script', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.03rem;
+  margin-left: 8px;
+  ${({ theme }) => theme.mediaWidth.upToSmall`
     display: none;
-  `};
-	font-family: 'Kaushan Script', sans-serif;
-	font-weight: 700;
-	font-size: 24px;
-	letter-spacing: 0.03rem;
-	margin-left: 8px;
-	${({ theme }) => theme.mediaWidth.upToSmall`
-		display: none;
   `};
 `
 
@@ -317,7 +323,7 @@ function AppBar(): JSX.Element {
                                                 <Web3Faucet />
                                             )
                                         }
-                                        
+
                                         <MoreMenu />
                                     </div>
                                 </div>
