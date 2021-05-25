@@ -1,21 +1,21 @@
-# SushiSwap Interface
+# Bao.finance Multi-Interface
 
 [![Styled With Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 
 An open source interface for SushiSwap -- a protocol for decentralized exchange of Ethereum tokens.
 
-- Website: [sushi.com](https://sushi.com/)
-- Interface: [app.sushi.com](https://app.sushi.com)
-- Docs: [sushiswap.gitbook.io](https://sushiswap.gitbook.io)
-- Twitter: [@SushiSwap](https://twitter.com/sushiswap)
-- Reddit: [/r/SushiSwap](https://www.reddit.com/r/SushiSwap)
-- Discord: [SushiSwap](https://discord.gg/Y7TF6QA)
+- (Staging) Website: [bao2.netlify.com](https://bao2.netlify.com/)
+- Interface: [bao2.netlify.com](https://bao2.netlify.com)
+- Docs: [baofinance.gitbook.io](https://baofinance.gitbook.io)
+- Twitter: [@BaoMan](https://twitter.com/thebaoman)
+- Reddit: [/r/BaoFinance](https://www.reddit.com/r/SushiSwap)
+- Discord: [Bao.finance](https://discord.gg/NE97etfU)
 
 ## Accessing the SushiSwap Interface
 
 To access the Sushiswap Interface, use an IPFS gateway link from the
-[latest release](https://github.com/sushiswap/sushiswap-interface/releases/latest),
-or visit [app.sushi.com](https://app.sushi.com).
+[latest release](https://github.com/jondwillis/sushiswap-interface/releases/latest),
+or visit [bao.finance](https://bao.finance).
 
 ## Listing a token
 
