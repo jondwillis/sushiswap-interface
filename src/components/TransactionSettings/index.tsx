@@ -26,9 +26,9 @@ const FancyButton = styled.button`
     font-size: 1rem;
     width: auto;
     min-width: 3.5rem;
-    border: 1px solid ${({ theme }) => theme.bg3};
+    border: 1px solid ${({ theme }) => darken(0.1, theme.bg3)};
     outline: none;
-    background: ${({ theme }) => theme.bg1};
+    background: ${({ theme }) => theme.bg3};
     :hover {
         border: 1px solid ${({ theme }) => theme.bg4};
     }
@@ -42,12 +42,12 @@ const Option = styled(FancyButton)<{ active: boolean }>`
     :hover {
         cursor: pointer;
     }
-    background-color: ${({ active, theme }) => active && theme.primary1};
+    background-color: ${({ active, theme }) => active && theme.bg3};
     color: ${({ active, theme }) => (active ? theme.white : theme.text1)};
 `
 
 const Input = styled.input`
-    background: ${({ theme }) => theme.bg1};
+    background: ${({ theme }) => theme.bg3};
     font-size: 16px;
     width: auto;
     outline: none;
@@ -149,7 +149,7 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
         <AutoColumn gap="md">
             <AutoColumn gap="sm">
                 <RowFixed>
-                    <TYPE.black fontWeight={400} fontSize={14} color={theme.text2}>
+                    <TYPE.black fontWeight={400} fontSize={14} color={theme.text3}>
                         {i18n._(t`Slippage tolerance`)}
                     </TYPE.black>
                     <QuestionHelper
@@ -234,7 +234,7 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
 
             <AutoColumn gap="sm">
                 <RowFixed>
-                    <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
+                    <TYPE.black fontSize={14} fontWeight={400} color={theme.text3}>
                         {i18n._(t`Transaction deadline`)}
                     </TYPE.black>
                     <QuestionHelper
@@ -253,7 +253,7 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
                             onChange={e => parseCustomDeadline(e.target.value)}
                         />
                     </OptionCustom>
-                    <TYPE.body style={{ paddingLeft: '8px' }} fontSize={14}>
+                    <TYPE.body style={{ paddingLeft: '8px' }} fontSize={14} color={theme.text3}>
                         {i18n._(t`minutes`)}
                     </TYPE.body>
                 </RowFixed>
