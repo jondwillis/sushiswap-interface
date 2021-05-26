@@ -1,9 +1,8 @@
 import { useFuse, useSortableData } from 'hooks'
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
 import { ChevronDown, ChevronUp } from 'react-feather'
 import styled from 'styled-components'
-import useFarmsWithAddress from 'hooks/useFarmsWithAddress'
+import useFarms from 'hooks/useFarms'
 import { RowBetween } from '../../../components/Row'
 import { formattedNum, formattedPercent } from '../../../utils'
 import { Card, CardHeader, DoubleLogo, Paper, Search } from '../components'
@@ -17,10 +16,9 @@ export const FixedHeightRow = styled(RowBetween)`
     height: 24px;
 `
 
-export default function Yield(): JSX.Element {
-    const { address } = useParams()
+export default function Farm(): JSX.Element {
     const { i18n } = useLingui()
-    const query = useFarmsWithAddress(address)
+    const query = useFarms()
     const farms = query?.farms
     const userFarms = query?.userFarms
 
@@ -37,11 +35,10 @@ export default function Yield(): JSX.Element {
     return (
         <>
             <Helmet>
-                <title>{i18n._(t`Yield Debugger`)} | Sushi</title>
+                <title>{i18n._(t`Farm`)} | Sushi</title>
                 <meta name="description" content="Farm SUSHI by staking LP (Liquidity Provider) tokens" />
             </Helmet>
             <div className="container max-w-2xl mx-auto">
-                <div className="text-gray-600 px-6 py-4">Debugging (view only): {address}</div>
                 <Card
                     className="h-full bg-light-900"
                     header={
@@ -49,7 +46,7 @@ export default function Yield(): JSX.Element {
                             <div className="flex w-full justify-between">
                                 <div className="hidden md:flex items-center">
                                     {/* <BackButton defaultRoute="/pool" /> */}
-                                    <div className="text-lg mr-2 whitespace-nowrap">{i18n._(t`Yield Instruments`)}</div>
+                                    <div className="text-lg mr-2 whitespace-nowrap">{i18n._(t`Farm Instruments`)}</div>
                                 </div>
                                 <Search search={search} term={term} />
                             </div>
@@ -62,7 +59,7 @@ export default function Yield(): JSX.Element {
                             <div className="pb-4">
                                 <div className="grid grid-cols-3 pb-4 px-4 text-sm  text-secondary">
                                     <div className="flex items-center">
-                                        <div>{i18n._(t`Your Yields`)}</div>
+                                        <div>{i18n._(t`Your Farms`)}</div>
                                     </div>
                                     <div className="flex items-center justify-end">
                                         <div>{i18n._(t`Deposited`)}</div>
@@ -170,7 +167,7 @@ const TokenBalance = ({ farm }: any) => {
                             </div>
                         </div>
                     </div>
-                    {/* {expand && (
+                    {expand && (
                         <InputGroup
                             pid={farm.pid}
                             pairAddress={farm.pairAddress}
@@ -179,7 +176,7 @@ const TokenBalance = ({ farm }: any) => {
                             token1Address={farm.liquidityPair.token1.id}
                             type={'LP'}
                         />
-                    )} */}
+                    )}
                 </Paper>
             )}
             {farm.type === 'KMP' && (
@@ -214,7 +211,7 @@ const TokenBalance = ({ farm }: any) => {
                             </div>
                         </div>
                     </div>
-                    {/* {expand && (
+                    {expand && (
                         <InputGroup
                             pid={farm.pid}
                             pairAddress={farm.pairAddress}
@@ -225,7 +222,7 @@ const TokenBalance = ({ farm }: any) => {
                             assetSymbol={farm.liquidityPair.asset.symbol}
                             assetDecimals={farm.liquidityPair.asset.decimals}
                         />
-                    )} */}
+                    )}
                 </Paper>
             )}
         </>
@@ -270,7 +267,7 @@ const UserBalance = ({ farm }: any) => {
                             </div>
                         </div>
                     </div>
-                    {/* {expand && (
+                    {expand && (
                         <InputGroup
                             pid={farm.pid}
                             pairAddress={farm.pairAddress}
@@ -279,7 +276,7 @@ const UserBalance = ({ farm }: any) => {
                             token1Address={farm.liquidityPair.token1.id}
                             type={'LP'}
                         />
-                    )} */}
+                    )}
                 </Paper>
             )}
             {farm.type === 'KMP' && (
@@ -315,7 +312,7 @@ const UserBalance = ({ farm }: any) => {
                             </div>
                         </div>
                     </div>
-                    {/* {expand && (
+                    {expand && (
                         <InputGroup
                             pid={farm.pid}
                             pairAddress={farm.pairAddress}
@@ -326,7 +323,7 @@ const UserBalance = ({ farm }: any) => {
                             assetSymbol={farm.liquidityPair.asset.symbol}
                             assetDecimals={farm.liquidityPair.asset.decimals}
                         />
-                    )} */}
+                    )}
                 </Paper>
             )}
         </>

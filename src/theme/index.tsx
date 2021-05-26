@@ -81,11 +81,21 @@ export function colors(darkMode: boolean): Colors {
         yellow2: '#F3841E',
         blue1: '#0094ec',
 
-        borderRadius: '10px'
+        borderRadius: '10px',
 
         // dont wanna forget these blue yet
         // blue4: darkMode ? '#153d6f70' : '#C4D9F8',
         // blue5: darkMode ? '#153d6f70' : '#EBF4FF',
+
+        heroBG: darkMode
+        ? 'radial-gradient(76.02% 75.41% at 1.84% 0%, #ff007a 0%, #021d43 100%)'
+        : 'radial-gradient(76.02% 75.41% at 1.84% 0%, #FF3696 0%, #FFD8EB 100%);',
+
+        gradientBG: darkMode
+        ? 'linear-gradient(180deg, #000711 100%, #101518 31.19%, rgba(0, 0, 0, 0) 0%)'
+        : 'linear-gradient(180deg, #fff8ee 100%, #efeae7 31.19%, rgba(0, 0, 0, 0) 0%)',
+
+        backgroundColor: darkMode ? '#000711' : '#fff8ee',
     }
 }
 

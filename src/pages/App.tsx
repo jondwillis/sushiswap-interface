@@ -1,4 +1,7 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react'
+import styled from 'styled-components'
+import bImage from '../assets/images/big_bao_fade.png'
+import noise from '../assets/images/noise.png'
 import { useLocation } from 'react-router-dom'
 import { AppBar, Polling, Popups } from '../components'
 import Web3ReactManager from '../components/Web3ReactManager'
@@ -64,6 +67,10 @@ function App(): JSX.Element {
 
     return (
         <Suspense fallback={null}>
+        <BGCard>
+        <CardNoise />
+        <CardBGImage />
+        </BGCard>
             <div className="flex flex-col items-start overflow-x-hidden h-screen">
                 <AppBar />
                 <div ref={bodyRef} className={wrapperClassList}>
@@ -77,5 +84,88 @@ function App(): JSX.Element {
         </Suspense>
     )
 }
+
+export const CardBGImage = styled.span`
+  mix-blend-mode: overlay;
+  background: url(${bImage});
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  background-repeat: no-repeat;
+
+  top: 0;
+  @media (max-width: 960px) {
+    background-repeat: no-repeat;
+  }
+`
+
+export const CardNoise = styled.span`
+  background: url(${noise});
+  mix-blend-mode: overlay;
+  width: 100%;
+  height: 100%;
+  /* max-width: 1000px; */
+  opacity: 0.3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  user-select: none;
+  z-index: 99;
+`
+
+export const CardFade = styled.span`
+  /* mix-blend-mode: overlay; */
+  width: 100%;
+  height: 100%;
+  background: ${({ theme }) => theme.gradientBG};
+  /* max-width: 1000px; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  user-select: none;
+  z-index: 99;
+  @media (max-width: 960px) {
+    height: 125vh;
+  }
+`
+
+export const StyledBG = styled.div`
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: ${({ theme }) => theme.backgroundColor};
+  -webkit-transform: translate3d(0, 0, 0);
+  height: -webkit-fill-available;
+  opacity: 1;
+  background: ${({ theme }) =>
+    `radial-gradient(50% 50% at 50% 50%, ${theme.primary1} 0%, ${theme.backgroundColor} 100%)`};
+  opacity: 0.15;
+  /* z-index: 9999; */
+  user-select: none;
+  pointer-events: none;
+`
+
+export const BGCard = styled.span`
+  width: 100vw;
+  height: 100vh;
+  /* max-width: 1200px; */
+  max-height: 1220px;
+  user-select: none;
+  background-repeat: no-repeat;
+  background: ${({ theme }) => theme.heroBG};
+  background-size: contain;
+  opacity: 0.2;
+  @media (max-width: 960px) {
+    width: 100vw;
+    height: 100vh;
+    max-height: 1220px;
+  }
+`
 
 export default App

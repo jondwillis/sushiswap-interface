@@ -46,7 +46,7 @@ function BentoBox(): JSX.Element {
                         </div>
                         <div className="font-medium text-base md:text-lg lg:text-xl text-center text-high-emphesis mt-0 md:mt-4 mb-8 p-4">
                             {i18n._(
-                                t`BentoBox is an innovative way to use dapps gas-efficiently and gain extra yield.`
+                                t`BentoBox is an innovative way to use dapps gas-efficiently and gain extra farm.`
                             )}
                         </div>
                     </div>

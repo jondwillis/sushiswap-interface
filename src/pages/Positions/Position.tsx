@@ -176,7 +176,7 @@ export default function Position({ pair, showUnwrapped = false, stakedBalance }:
                             padding="8px"
                             borderRadius="8px"
                             as={Link}
-                            to={`/yield/${currencyId(currency0)}/${currencyId(currency1)}`}
+                            to={`/farm/${currencyId(currency0)}/${currencyId(currency1)}`}
                             width="100%"
                         >
                             Manage Liquidity in Rewards Pool

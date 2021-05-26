@@ -20,6 +20,7 @@ const CMC_STABLECOIN = 'stablecoin.cmc.eth'
 const KLEROS_LIST = 't2crtokens.eth'
 const GEMINI_LIST = 'https://www.gemini.com/uniswap/manifest.json'
 const QUICK_SWAP = 'https://unpkg.com/quickswap-default-token-list@1.0.39/build/quickswap-default.tokenlist.json'
+const BAO_LIST = 'https://raw.githubusercontent.com/baofinance/tokenlists/main/xdai.json'
 
 // lower index == higher priority for token import
 export const DEFAULT_LIST_OF_LISTS: string[] = [
@@ -33,12 +34,13 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
     SET_LIST,
     OPYN_LIST,
     ROLL_LIST,
-    // COINGECKO_LIST,
+    COINGECKO_LIST,
     CMC_ALL_LIST,
     CMC_STABLECOIN,
     KLEROS_LIST,
     GEMINI_LIST,
     QUICK_SWAP,
+    BAO_LIST,
     ...UNSUPPORTED_LIST_URLS // need to load unsupported tokens as well
 ]
 

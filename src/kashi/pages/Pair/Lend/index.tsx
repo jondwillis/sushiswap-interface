@@ -112,7 +112,7 @@ export default function LendingPair({
                                 {i18n._(t`None`)}
                                 <QuestionHelper
                                     text={i18n._(
-                                        t`BentoBox strategies can create yield for your liquidity while it is not lent out. This token does not yet have a strategy in the BentoBox.`
+                                        t`BentoBox strategies can create farm for your liquidity while it is not lent out. This token does not yet have a strategy in the BentoBox.`
                                     )}
                                 />
                             </div>

@@ -176,7 +176,7 @@ export const CHAINLINK_TOKENS: { [chainId in ChainId]?: ChainlinkToken[] } = {
         { symbol: 'WBTC', name: 'Wrapped BTC', address: '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', decimals: 8 },
         { symbol: 'wNXM', name: 'Wrapped NXM', address: '0x0d438F3b5175Bebc262bF23753C1E53d03432bDE', decimals: 18 },
         { symbol: 'WOM', name: 'WOM Token', address: '0xBd356a39BFf2cAda8E9248532DD879147221Cf76', decimals: 18 },
-        { symbol: 'xSUSHI', name: 'SushiBar', address: '0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272', decimals: 18 },
+        { symbol: 'xSUSHI', name: 'Staking', address: '0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272', decimals: 18 },
         { symbol: 'YFI', name: 'yearn.finance', address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e', decimals: 18 },
         { symbol: 'YFII', name: 'YFII.finance', address: '0xa1d0E215a23d7030842FC67cE582a6aFa3CCaB83', decimals: 18 },
         {

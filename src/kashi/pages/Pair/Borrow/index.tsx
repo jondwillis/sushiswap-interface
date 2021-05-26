@@ -106,7 +106,7 @@ export default function BorrowPair({
                                 {i18n._(t`None`)}
                                 <QuestionHelper
                                     text={i18n._(
-                                        t`BentoBox strategies can create yield for your collateral tokens. This token does not yet have a strategy in the BentoBox.`
+                                        t`BentoBox strategies can create farm for your collateral tokens. This token does not yet have a strategy in the BentoBox.`
                                     )}
                                 />
                             </div>

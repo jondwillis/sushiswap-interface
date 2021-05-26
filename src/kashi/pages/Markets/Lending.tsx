@@ -40,7 +40,7 @@ export default function LendingMarkets(): JSX.Element | null {
                 <Card
                     className="h-full bg-light-900"
                     backgroundImage={DepositGraphic}
-                    title={i18n._(t`Lend your assets, earn yield with no impermanent loss`)}
+                    title={i18n._(t`Lend your assets, earn farm with no impermanent loss`)}
                     description={i18n._(
                         t`Isolated lending markets mitigate your risks as an asset lender. Know exactly what collateral is available to you in the event of counter party insolvency.`
                     )}

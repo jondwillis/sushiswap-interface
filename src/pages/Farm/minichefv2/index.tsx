@@ -21,7 +21,7 @@ export const FixedHeightRow = styled(RowBetween)`
     height: 24px;
 `
 
-export default function Yield(): JSX.Element {
+export default function Farm(): JSX.Element {
     const { i18n } = useLingui()
     const query = useFarmsV2()
     const farms = query?.farms
@@ -42,7 +42,7 @@ export default function Yield(): JSX.Element {
     return (
         <>
             <Helmet>
-                <title>{i18n._(t`Yield`)} | Sushi</title>
+                <title>{i18n._(t`Farm`)} | Sushi</title>
                 <meta name="description" content="Farm SUSHI by staking LP (Liquidity Provider) tokens" />
             </Helmet>
             <div className="container max-w-4xl mx-auto px-0 sm:px-4">
@@ -54,7 +54,7 @@ export default function Yield(): JSX.Element {
                                 <div className="hidden md:block items-center">
                                     {/* <BackButton defaultRoute="/pool" /> */}
                                     <div className="text-lg mr-2 whitespace-nowrap flex items-center">
-                                        <div className="mr-2">{i18n._(t`Yield Instruments`)}</div>
+                                        <div className="mr-2">{i18n._(t`Farm Instruments`)}</div>
                                         <Badge color="blue">{i18n._(t`V2 Rewarder`)}</Badge>
                                     </div>
                                     <div className="flex items-center">
@@ -74,7 +74,7 @@ export default function Yield(): JSX.Element {
                             <div className="pb-4">
                                 <div className="grid grid-cols-3 pb-4 px-4 text-sm  text-secondary">
                                     <div className="flex items-center">
-                                        <div>{i18n._(t`Your Yields`)}</div>
+                                        <div>{i18n._(t`Your Farms`)}</div>
                                     </div>
                                     <div className="flex items-center justify-end">
                                         <div>{i18n._(t`Deposited`)}</div>

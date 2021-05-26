@@ -8,7 +8,7 @@ import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import { useWalletModalToggle } from '../../state/application/hooks'
 import { BalanceProps } from '../../hooks/useTokenBalance'
 import { formatFromBalance, formatToBalance } from '../../utils'
-import useSushiBar from '../../hooks/useSushiBar'
+import useStaking from '../../hooks/useStaking'
 import TransactionFailedModal from './TransactionFailedModal'
 import { Button, Dots } from '../../components'
 import { t } from '@lingui/macro'
@@ -57,7 +57,7 @@ export default function StakeCard({ sushiBalance, xSushiBalance }: StakeCardProp
     const { i18n } = useLingui()
     const { account } = useActiveWeb3React()
 
-    const { allowance, enter, leave } = useSushiBar()
+    const { allowance, enter, leave } = useStaking()
 
     const [exchangeRate, setExchangeRate] = useState<any>()
     useEffect(() => {

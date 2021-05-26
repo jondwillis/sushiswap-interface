@@ -14,7 +14,7 @@ const mock = {
     avgBalStaked: 468.48
 }
 
-export default function SushiBarTransactions() {
+export default function StakingTransactions() {
     const theme = useContext(ThemeContext)
 
     const sushiBalance = useTokenBalance(SUSHI[ChainId.MAINNET]?.address ?? '')

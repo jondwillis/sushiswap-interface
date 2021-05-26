@@ -47,6 +47,11 @@ export interface Colors {
     blue1: Color
 
     borderRadius: string
+
+    // background assets
+    heroBG: string
+    gradientBG: string
+    backgroundColor: string
 }
 
 export interface Grids {

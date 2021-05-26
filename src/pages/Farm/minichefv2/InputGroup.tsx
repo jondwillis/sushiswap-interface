@@ -101,7 +101,7 @@ export default function InputGroup({
                                         <Link to="/migrate" className="underline text-blue">
                                             migrating existing liquidity.
                                         </Link>{' '}
-                                        Once you have SLP you can stake it into this yield farm to start earning
+                                        Once you have SLP you can stake it into this farm farm to start earning
                                         rewards. Unstake anytime and then you can convert your SLP back to base tokens
                                         by clicking Remove Liquidity. Click Harvest to receive your rewards at any time.
                                     </Trans>

@@ -7,7 +7,7 @@ import { useTransactionAdder } from '../state/transactions/hooks'
 
 const { BigNumber } = ethers
 
-const useSushiBar = () => {
+const useStaking = () => {
     const { account } = useActiveWeb3React()
     const addTransaction = useTransactionAdder()
     const sushiContract = useSushiContract(true) // withSigner
@@ -50,7 +50,7 @@ const useSushiBar = () => {
         async (amount: string) => {
             try {
                 const tx = await barContract?.enter(ethers.utils.parseUnits(amount))
-                return addTransaction(tx, { summary: 'Enter SushiBar' })
+                return addTransaction(tx, { summary: 'Enter Staking' })
             } catch (e) {
                 return e
             }
@@ -63,7 +63,7 @@ const useSushiBar = () => {
         async (amount: string) => {
             try {
                 const tx = await barContract?.leave(ethers.utils.parseUnits(amount))
-                return addTransaction(tx, { summary: 'Leave SushiBar' })
+                return addTransaction(tx, { summary: 'Leave Staking' })
             } catch (e) {
                 console.log('leave_error:', e)
                 return e
@@ -75,4 +75,4 @@ const useSushiBar = () => {
     return { allowance, approve, enter, leave }
 }
 
-export default useSushiBar
+export default useStaking

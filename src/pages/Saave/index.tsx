@@ -55,7 +55,7 @@ export default function Saave() {
                         <AutoColumn gap="md">
                             <RowBetween>
                                 <TYPE.white fontWeight={600} color={theme.text1}>
-                                    {i18n._(t`SAAVE: Stack your yields in one transaction`)}
+                                    {i18n._(t`SAAVE: Stack your farms in one transaction`)}
                                 </TYPE.white>
                             </RowBetween>
                             <RowBetween>
@@ -86,7 +86,7 @@ export default function Saave() {
                             <RowBetween>
                                 <TYPE.white fontSize={14} color={theme.text2}>
                                     {i18n._(
-                                        t`To withdraw into SUSHI, go to Aave and remove axSUSHI as collateral and then to SushiBar to unstake. A full unwind will be avaialble soon.`
+                                        t`To withdraw into SUSHI, go to Aave and remove axSUSHI as collateral and then to Staking to unstake. A full unwind will be avaialble soon.`
                                     )}
                                 </TYPE.white>
                             </RowBetween>

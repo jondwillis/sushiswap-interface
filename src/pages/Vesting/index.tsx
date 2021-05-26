@@ -309,7 +309,7 @@ export default function ClaimModal() {
                                                 <AutoRow>
                                                     <AutoRow marginBottom="2px">
                                                         <TYPE.body fontWeight={500}>
-                                                            {i18n._(t`Stack Yields with SAAVE`)}
+                                                            {i18n._(t`Stack Farms with SAAVE`)}
                                                         </TYPE.body>
                                                     </AutoRow>
                                                     <AutoRow>
@@ -334,7 +334,7 @@ export default function ClaimModal() {
                                                     </AutoRow>
                                                     <AutoRow>
                                                         <TYPE.darkGray fontSize=".75rem">
-                                                            {t`(COMING SOON) Accrue automatic yield through flash loans and
+                                                            {t`(COMING SOON) Accrue automatic farm through flash loans and
                                                             SUSHI strategies`}
                                                         </TYPE.darkGray>
                                                     </AutoRow>

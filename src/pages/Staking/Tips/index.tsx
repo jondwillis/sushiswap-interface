@@ -24,7 +24,7 @@ const tips: readonly Tip[] = [
         title: 'Deposit into BentoBox',
         image: BentoSquare,
         description:
-            'Deposit your xSUSHI into BentoBox to passively earn yield through an xSUSHI investment strategy, or use as collateral within Kashi and future Bento dapps.',
+            'Deposit your xSUSHI into BentoBox to passively earn farm through an xSUSHI investment strategy, or use as collateral within Kashi and future Bento dapps.',
         href: '#'
     },
     {
@@ -35,18 +35,18 @@ const tips: readonly Tip[] = [
         href: '#'
     },
     {
-        title: 'Stack Yields with Aave',
+        title: 'Stack Farms with Aave',
         image: AaveSquare,
         description:
             'Deposit your xSUSHI into Aave to receive aXSUSHI to earn collateral interest and borrowing power.',
         href: '#'
     },
     {
-        title: 'Stack Yields with Cream',
+        title: 'Stack Farms with Cream',
         image: CreamSquare,
         description: (
             <>
-                Farm for more yields at{' '}
+                Farm for more farms at{' '}
                 <Link to="#" className="underline">
                     cream.finance
                 </Link>{' '}
@@ -65,7 +65,7 @@ const tips: readonly Tip[] = [
     }
 ]
 
-export default function SushiBarTips() {
+export default function StakingTips() {
     const theme = useContext(ThemeContext)
     const history = useHistory()
 
@@ -86,7 +86,7 @@ export default function SushiBarTips() {
                 <div className="text-high-emphesis text-h4">Make the most of your xSUSHI.</div>
                 <div className="text-gray-500 py-3">
                     You can leave the bar and exchange your xSUSHI for SUSHI (as well as collect any earned interest) at
-                    any time. However, there are more ways to use xSUSHI to maximize your yield potential!
+                    any time. However, there are more ways to use xSUSHI to maximize your farm potential!
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
                     {tips.map(({ title, image, description, href }, i) => (

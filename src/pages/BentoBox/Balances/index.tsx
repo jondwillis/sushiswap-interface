@@ -40,9 +40,9 @@ export default function BentoBalances(): JSX.Element {
                     <Card
                         className="h-full bg-light-900"
                         backgroundImage={BentoBoxImage}
-                        title={i18n._(t`Deposit tokens into BentoBox for all the yields`)}
+                        title={i18n._(t`Deposit tokens into BentoBox for all the farms`)}
                         description={i18n._(
-                            t`BentoBox provides extra yield on deposits with flash lending, strategies, and fixed, low-gas transfers among integrated dapps, like Kashi markets`
+                            t`BentoBox provides extra farm on deposits with flash lending, strategies, and fixed, low-gas transfers among integrated dapps, like Kashi markets`
                         )}
                     />
                 }
