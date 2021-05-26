@@ -625,28 +625,6 @@ export default function Swap() {
                     {/*        </DarkCard>*/}
                     {/*    </div>*/}
                     {/*)}*/}
-                    <a
-                        href="https://miso.sushi.com"
-                        className="hidden sm:block w-full cursor-pointer mt-4 py-6 rounded"
-                        style={{
-                            backgroundImage: `url(${MisoBanner})`,
-                            backgroundPosition: 'center',
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat'
-                        }}
-                    >
-                        <div className="justify-between flex pl-5 pr-8 items-center gap-6">
-                            <span className="text-high-emphesis font-normal" style={{ lineHeight: 1.3, maxWidth: 250 }}>
-                                <Trans>
-                                    Pour a hot bowl of MISO, the new <span className="font-bold">token launchpad</span>{' '}
-                                    from SUSHI
-                                </Trans>
-                            </span>
-                            <div style={{ maxWidth: 195 }}>
-                                <img src={MisoLogo} style={{ maxWidth: '100%' }} />
-                            </div>
-                        </div>
-                    </a>
                 </Wrapper>
             </div>
             {!swapIsUnsupported ? (

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { darken } from 'polished'
 
 export const StyledMenuButton = styled.button`
   position: relative;
@@ -39,6 +40,7 @@ export const StyledMenu = styled.div`
     position: relative;
     border: none;
     text-align: left;
+    color: ${({ theme }) => theme.bg2};
     ${({ theme }) => theme.mediaWidth.upToExtra2Small`
     margin-left: 0.2rem;
   `};
@@ -46,7 +48,7 @@ export const StyledMenu = styled.div`
 
 export const MenuFlyout = styled.span`
     min-width: 8.125rem;
-    background-color: #161522;
+    background-color: ${darken(0.1, '#f0e9e6')};
     // background-color: ${({ theme }) => theme.bg3};
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
         0px 24px 32px rgba(0, 0, 0, 0.01);

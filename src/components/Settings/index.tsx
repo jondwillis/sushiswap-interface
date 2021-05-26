@@ -28,7 +28,7 @@ const StyledMenuIcon = styled(Settings)`
     width: 20px;
 
     > * {
-        stroke: ${({ theme }) => theme.text2};
+        stroke: ${({ theme }) => theme.text3};
     }
 
     :hover {
@@ -171,7 +171,7 @@ export default function SettingsTab() {
                         </div>
                         <RowBetween>
                             <RowFixed>
-                                <TYPE.black fontWeight={400} fontSize={14} color={theme.text2}>
+                                <TYPE.black fontWeight={400} fontSize={14} color={theme.text3}>
                                     {i18n._(t`Toggle Expert Mode`)}
                                 </TYPE.black>
                                 <QuestionHelper
@@ -198,7 +198,7 @@ export default function SettingsTab() {
                         </RowBetween>
                         <RowBetween>
                             <RowFixed>
-                                <TYPE.black fontWeight={400} fontSize={14} color={theme.text2}>
+                                <TYPE.black fontWeight={400} fontSize={14} color={theme.text3}>
                                     {i18n._(t`Disable Multihops`)}
                                 </TYPE.black>
                                 <QuestionHelper text={i18n._(t`Restricts swaps to direct pairs only.`)} />

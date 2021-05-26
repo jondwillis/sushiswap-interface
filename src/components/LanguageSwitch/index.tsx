@@ -1,6 +1,7 @@
 import { MenuFlyout, StyledMenu, StyledMenuButton } from 'components/StyledMenu'
 import React, { memo, useRef } from 'react'
 import styled from 'styled-components'
+import { darken } from 'polished'
 import ChFlag from '../../assets/images/ch-flag.png'
 import DeFlag from '../../assets/images/de-flag.png'
 import EnFlag from '../../assets/images/en-flag.png'
@@ -16,13 +17,13 @@ import { useModalOpen, useToggleModal } from '../../state/application/hooks'
 import { useLanguageData } from '../../language/hooks'
 
 const ExtendedStyledMenuButton = styled(StyledMenuButton)`
-    border: 2px solid rgb(23, 21, 34);
+    border: 2px solid #f0e9e6;
     border-radius: 10px;
     font-size: 1.25rem;
     height: 40px;
 
     &:hover {
-        border-color: rgb(33, 34, 49);
+        border-color: ${darken(0.1, '#f0e9e6')};
     }
 `
 
@@ -42,7 +43,7 @@ const MenuItem = styled.span`
     //display: flex;
     padding: 0.5rem 0.5rem;
     font-weight: 500;
-    color: ${({ theme }) => theme.text2};
+    color: ${({ theme }) => theme.bg2};
     :hover {
         color: ${({ theme }) => theme.text1};
         cursor: pointer;
