@@ -162,8 +162,7 @@ const useFarms = () => {
         if (account) {
             const userFarmDetails = await boringHelperContract?.pollPools(account, pids)
             //console.log('userFarmDetails:', userFarmDetails)
-            const userFarms = userFarmDetails
-                .filter((farm: any) => {
+            const userFarms = userFarmDetails?.filter((farm: any) => {
                     return farm.balance.gt(BigNumber.from(0)) || farm.pending.gt(BigNumber.from(0))
                 })
                 .map((farm: any) => {
