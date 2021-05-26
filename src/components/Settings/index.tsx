@@ -28,7 +28,7 @@ const StyledMenuIcon = styled(Settings)`
     width: 20px;
 
     > * {
-        stroke: ${({ theme }) => theme.text3};
+        stroke: ${({ theme }) => theme.text1};
     }
 
     :hover {
@@ -157,7 +157,7 @@ export default function SettingsTab() {
             {open && (
                 <ExtendedMenuFlyout>
                     <AutoColumn gap="md" style={{ padding: '1rem' }}>
-                        <div className="text-base font-semibold text-high-emphesis">
+                        <div className="text-base font-semibold text-primary">
                             {i18n._(t`Transaction Settings`)}
                         </div>
                         <TransactionSettings
@@ -166,12 +166,12 @@ export default function SettingsTab() {
                             deadline={ttl}
                             setDeadline={setTtl}
                         />
-                        <div className="text-base font-semibold text-high-emphesis">
+                        <div className="text-base font-semibold text-primary">
                             {i18n._(t`Interface Settings`)}
                         </div>
                         <RowBetween>
                             <RowFixed>
-                                <TYPE.black fontWeight={400} fontSize={14} color={theme.text3}>
+                                <TYPE.black fontWeight={400} fontSize={14} color={theme.text1}>
                                     {i18n._(t`Toggle Expert Mode`)}
                                 </TYPE.black>
                                 <QuestionHelper
@@ -198,7 +198,7 @@ export default function SettingsTab() {
                         </RowBetween>
                         <RowBetween>
                             <RowFixed>
-                                <TYPE.black fontWeight={400} fontSize={14} color={theme.text3}>
+                                <TYPE.black fontWeight={400} fontSize={14} color={theme.text1}>
                                     {i18n._(t`Disable Multihops`)}
                                 </TYPE.black>
                                 <QuestionHelper text={i18n._(t`Restricts swaps to direct pairs only.`)} />

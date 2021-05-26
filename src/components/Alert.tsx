@@ -2,7 +2,7 @@ import React from 'react'
 
 const TYPE = {
     information: {
-        color: 'bg-purple bg-opacity-20 text-high-emphesis',
+        color: 'bg-light-600 bg-opacity-20 text-primary',
         icon: (
             <svg
                 width="33"
@@ -21,7 +21,7 @@ const TYPE = {
         )
     },
     warning: {
-        color: 'bg-yellow-400 bg-opacity-25 text-high-emphesis',
+        color: 'bg-yellow-400 bg-opacity-25 text-primary',
         icon: (
             <svg
                 className="h-5 w-5 text-yellow-400"
@@ -39,7 +39,7 @@ const TYPE = {
         )
     },
     error: {
-        color: 'bg-red bg-opacity-25 text-high-emphesis',
+        color: 'bg-red bg-opacity-25 text-primary',
         icon: (
             <svg
                 className="h-5 w-5 text-red"

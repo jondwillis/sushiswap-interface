@@ -53,6 +53,10 @@ import { useLingui } from '@lingui/react'
 import { useSwapCallback } from '../../hooks/useSwapCallback'
 import MisoBanner from '../../assets/images/miso-banner.jpg'
 import MisoLogo from '../../assets/images/miso-logo.png'
+import PandaLogo from '../../assets/images/panda-logo.png'
+import styled, { keyframes } from 'styled-components'
+import PandaCardBG from '../../assets/images/panda-card.jpg'
+
 
 export default function Swap() {
     const { i18n } = useLingui()
@@ -315,7 +319,7 @@ export default function Swap() {
                 onConfirm={handleConfirmTokenWarning}
             />
             <SwapPoolTabs active={'swap'} />
-            <div className="bg-light-900 w-full max-w-2xl rounded border border-purple shadow-inset-light">
+            <div className="bg-light-900 w-full max-w-2xl rounded border border-base shadow-inset-light-glow">
                 <SwapHeader input={currencies[Field.INPUT]} output={currencies[Field.OUTPUT]} />
                 <Wrapper id="swap-page">
                     <ConfirmSwapModal
@@ -331,20 +335,21 @@ export default function Swap() {
                         swapErrorMessage={swapErrorMessage}
                         onDismiss={handleConfirmDismiss}
                     />
-                    {chainId && chainId === ChainId.MATIC && (
+                    {chainId && chainId === ChainId.XDAI && (
                         <div className="hidden md:block pb-4 space-y-2">
-                            <DarkCard>
+                            <PandaCard>
                                 <div className="flex justify-between items-center">
-                                    <div>
-                                        <div className="text-white">New Farm Farms! renDOGE, SNX, USDC, DAI</div>
-                                        <div className="text-purple text-sm">Add liquidity and stake now</div>
+                                    <img src={PandaLogo} width="60" />
+                                    <div style={{marginLeft: '1rem'}}>
+                                        <div className="text-white font-bold text-body drop-shadow-text">Pandaswap is now live on BSC!</div>
+                                        <div className="text-white text-caption font-medium drop-shadow-sm">Add liquidity and stake now!</div>
                                     </div>
                                     <div className=""></div>
                                     <Link
-                                        to="/farm"
-                                        className="inline-flex items-center rounded-sm px-3 py-2 border-2 border-purple text-purple"
+                                        to="https://pandaswap.xyz"
+                                        className="bg-purple inline-flex items-center rounded-sm px-3 py-2 border-purple shadow-inset-dark text-black"
                                     >
-                                        Visit Farm
+                                        Visit Pandaswap
                                     </Link>
                                     {/* <a
                                         href="https://ayokiroll.medium.com/cf7e932f3a8"
@@ -355,7 +360,7 @@ export default function Swap() {
                                         Read Tutorial
                                     </a> */}
                                 </div>
-                            </DarkCard>
+                            </PandaCard>
                         </div>
                     )}
                     <AutoColumn gap={'md'}>
@@ -638,3 +643,39 @@ export default function Swap() {
         </>
     )
 }
+
+const sheen = keyframes`{
+    100% {
+      transform: rotateZ(60deg) translate(1em, -40em);
+    }
+  }`
+
+export const PandaCard = styled(Card)`
+    overflow: hidden;
+    background-origin: border-box;
+    position: relative;
+    background-color: ${({ theme }) => theme.bg2};
+    background: url(${PandaCardBG});
+
+    &:hover {
+        background-origin: border-box;
+        &::after {
+            animation: ${sheen} 0.4s forwards;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: -80%;
+        right: -20%;
+        bottom: -50%;
+        left: -120%;
+        background: linear-gradient(
+            to bottom,
+            rgba(229, 172, 142, 0),
+            rgba(255, 255, 255, 0.5) 50%,
+            rgba(229, 172, 142, 0)
+        );
+        transform: rotateZ(70deg) translate(-5em, 7.5em);
+    }
+`

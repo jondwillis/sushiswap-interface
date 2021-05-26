@@ -39,8 +39,11 @@ module.exports = {
             red: '#FF3838',
             blue: '#27B0E6',
             pink: '#FA52A0',
-            purple: '#e2d6cf',
-            green: '#7CFF6B',
+            orange: '#ce6509',
+            brown: '#50251c',
+            purple: '#e4aed0',
+            base: '#e2d6cf',
+            green: '#08b300',
 
             'pink-red': '#FE5A75',
             'light-brown': '#FEC464',
@@ -180,13 +183,16 @@ module.exports = {
                 'blue-glow-hovered': '0px 57px 90px -47px rgba(39, 176, 230, 0.34)',
 
                 'swap-brown-glow': '0px 50px 250px -47px rgba(80, 37, 28, 0.29)',
-                'liquidity-purple-glow': '0px 50px 250px -47px rgba(123, 97, 255, 0.23);',
+                'liquidity-purple-glow': '0px 50px 250px -47px rgba(80, 37, 28, 0.29)',
 
-                'inset-light': 'rgb(247 244 242) 1px 1px 0px inset',
+                'inset-dark-glow': 'rgb(255 252 245) -8px -8px 16px, rgb(181 176 174 / 50%) 4px 4px 8px, rgb(247 244 242) 1px 1px 0px inset',
+                'inset-light-glow': 'rgb(181 176 174) 4px 4px 8px, rgb(255 252 245 / 50%) -8px -8px 16px, rgb(247 244 242) 1px 1px 0px inset',
                 'inset-dark': '#a79e99 0px 0px 1px inset',
-                'inset-dark-2': '#a79e99 1px 1px 0px inset'
-
-
+                'inset-light': 'rgb(247 244 242) 1px 1px 0px inset', 
+            },
+            dropShadow: {
+                ...defaultTheme.dropShadow,
+                'text': '0 35px 35px rgba(0, 0, 0, 0.25)'
             },
             ringWidth: {
                 ...defaultTheme.ringWidth,
@@ -239,7 +245,7 @@ module.exports = {
             addUtilities({
                 '.gradiant-border-bottom': {
                     background:
-                        'linear-gradient(to right, rgba(39, 176, 230, 0.2) 0%, rgba(250, 82, 160, 0.2) 100%) left bottom no-repeat',
+                        'linear-gradient(to right, #ce6509 0%, #50251c 0.2 100%) left bottom no-repeat',
                     backgroundSize: '100% 1px'
                 }
             })
@@ -251,7 +257,7 @@ module.exports = {
                         border: 'double 1px transparent',
                         borderRadius: '0.375rem',
                         backgroundImage:
-                            'linear-gradient(#202231, #202231), linear-gradient(to right, #0993EC, #F338C3)',
+                            'linear-gradient(#efe9e7, #efe9e7), linear-gradient(to right, #ce6509, #50251c)',
                         backgroundOrigin: 'border-box',
                         backgroundClip: 'padding-box, border-box'
                     }

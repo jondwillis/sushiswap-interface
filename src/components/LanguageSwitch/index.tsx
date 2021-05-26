@@ -43,9 +43,9 @@ const MenuItem = styled.span`
     //display: flex;
     padding: 0.5rem 0.5rem;
     font-weight: 500;
-    color: ${({ theme }) => theme.bg2};
+    color: ${({ theme }) => theme.text1};
     :hover {
-        color: ${({ theme }) => theme.text1};
+        color: ${({ theme }) => theme.text3};
         cursor: pointer;
         text-decoration: none;
     }

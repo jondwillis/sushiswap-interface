@@ -41,16 +41,16 @@ export function colors(darkMode: boolean): Colors {
         black,
 
         // text
-        text1: darkMode ? '#FFFFFF' : '#000000',
-        text2: darkMode ? '#C3C5CB' : '#565A69',
-        text3: darkMode ? '#6C7284' : '#888D9B',
-        text4: darkMode ? '#565A69' : '#C3C5CB',
+        text1: darkMode ? 'rgb(128, 94, 73)' : 'rgb(128, 94, 73)',
+        text2: darkMode ? 'rgb(91, 57, 38)' : 'rgb(91, 57, 38)',
+        text3: darkMode ? 'rgb(209, 108, 0)' : 'rgb(209, 108, 0)',
+        text4: darkMode ? 'rgb(170, 149, 133)' : 'rgb(170, 149, 133)',
         text5: darkMode ? '#2C2F36' : '#EDEEF2',
 
         // backgrounds / greys
-        bg1: darkMode ? '#202231' : '#FFFFFF',
-        bg2: darkMode ? 'rgb(22, 21, 34)' : '#F7F8FA',
-        bg3: darkMode ? darken(0.1, '#e2d5cf') : '#EDEEF2',
+        bg1: darkMode ? '#ddcdc6' : '#FFFFFF',
+        bg2: darkMode ? '#e1d6cf' : '#F7F8FA',
+        bg3: darkMode ? '#efe9e7': '#EDEEF2',
         bg4: darkMode ? '#3a506f' : '#CED0D9',
         bg5: darkMode ? '#6C7284' : '#888D9B',
 
@@ -59,17 +59,17 @@ export function colors(darkMode: boolean): Colors {
         advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
         //primary colors
-        primary1: darkMode ? '#0094ec' : '#0e0e23',
+        primary1: darkMode ? '#ca6b00' : '#0e0e23',
         primary2: darkMode ? '#0097fb' : '#FF8CC3',
         primary3: darkMode ? '#00aff5' : '#FF99C9',
         primary4: darkMode ? '#376bad70' : '#F6DDE8',
-        primary5: darkMode ? '#153d6f70' : '#ebebeb',
+        primary5: darkMode ? '#efeae7' : '#efeae7',
 
         // color text
         primaryText1: darkMode ? '#6da8ff' : '#0e0e23',
 
         // secondary colors
-        secondary1: darkMode ? '#0094ec' : '#ff007a',
+        secondary1: darkMode ? '#ca6b00' : '#ff007a',
         secondary2: darkMode ? '#17000b26' : '#F6DDE8',
         secondary3: darkMode ? '#17000b26' : '#ebebeb',
 
@@ -80,7 +80,7 @@ export function colors(darkMode: boolean): Colors {
         green1: '#27AE60',
         yellow1: '#FFE270',
         yellow2: '#F3841E',
-        blue1: '#0094ec',
+        blue1: '#ca6b00',
 
         borderRadius: '10px',
 
