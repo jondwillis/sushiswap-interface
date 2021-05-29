@@ -48,11 +48,10 @@ export const StyledMenu = styled.div`
 
 export const MenuFlyout = styled.span`
     min-width: 8.125rem;
-    background-color: ${darken(0.1, '#f0e9e6')};
-    // background-color: ${({ theme }) => theme.bg3};
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
-        0px 24px 32px rgba(0, 0, 0, 0.01);
+    background-color: ${({ theme }) => theme.bg3};
+    box-shadow: rgb(247 244 242) 1px 1px 0px inset;
     border-radius: ${({ theme }) => theme.borderRadius};
+    border: 1px solid rgb(226, 214, 207);
     padding: 0.5rem;
     display: flex;
     flex-direction: column;

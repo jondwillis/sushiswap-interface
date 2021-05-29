@@ -30,7 +30,7 @@ const FancyButton = styled.button`
     outline: none;
     background: ${({ theme }) => theme.bg3};
     :hover {
-        border: 1px solid ${({ theme }) => theme.bg4};
+        border: 1px solid ${({ theme }) => theme.text1};
     }
     :focus {
         border: 1px solid ${({ theme }) => theme.primary1};
@@ -42,8 +42,9 @@ const Option = styled(FancyButton)<{ active: boolean }>`
     :hover {
         cursor: pointer;
     }
-    background-color: ${({ active, theme }) => active && theme.bg3};
+    background-color: ${({ active, theme }) => active && theme.text3};
     color: ${({ active, theme }) => (active ? theme.white : theme.text1)};
+    border: ${({ active, theme }) => active && theme.text1};
 `
 
 const Input = styled.input`
@@ -149,7 +150,7 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
         <AutoColumn gap="md">
             <AutoColumn gap="sm">
                 <RowFixed>
-                    <TYPE.black fontWeight={400} fontSize={14} color={theme.text3}>
+                    <TYPE.black fontWeight={400} fontSize={14} color={theme.text1}>
                         {i18n._(t`Slippage tolerance`)}
                     </TYPE.black>
                     <QuestionHelper
@@ -234,7 +235,7 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
 
             <AutoColumn gap="sm">
                 <RowFixed>
-                    <TYPE.black fontSize={14} fontWeight={400} color={theme.text3}>
+                    <TYPE.black fontSize={14} fontWeight={400} color={theme.text1}>
                         {i18n._(t`Transaction deadline`)}
                     </TYPE.black>
                     <QuestionHelper
@@ -253,7 +254,7 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
                             onChange={e => parseCustomDeadline(e.target.value)}
                         />
                     </OptionCustom>
-                    <TYPE.body style={{ paddingLeft: '8px' }} fontSize={14} color={theme.text3}>
+                    <TYPE.body style={{ paddingLeft: '8px' }} fontSize={14} color={theme.text1}>
                         {i18n._(t`minutes`)}
                     </TYPE.body>
                 </RowFixed>

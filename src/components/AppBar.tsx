@@ -19,6 +19,8 @@ import LanguageSwitch from './LanguageSwitch'
 import { useLingui } from '@lingui/react'
 import styled from 'styled-components'
 import KaushanScript from '../assets/fonts/KaushanScript-Regular.ttf'
+import baoSquare from '../assets/images/bao-square.png'
+import baoCxSquare from '../assets/images/baocx-square.png'
 
 const TitleText = styled.span`
   @font-face {
@@ -208,11 +210,11 @@ function AppBar(): JSX.Element {
                                             )}
 
                                         {chainId &&
-                                            [ChainId.MAINNET, ChainId.BSC, ChainId.MATIC].includes(chainId) &&
+                                            [ChainId.MAINNET, ChainId.BSC, ChainId.XDAI].includes(chainId) &&
                                             library &&
                                             library.provider.isMetaMask && (
                                                 <>
-                                                    <QuestionHelper text={i18n._(t`Add Sushi to your Metamask wallet`)}>
+                                                    <QuestionHelper text={i18n._(t`Add Bao to your Metamask wallet`)}>
                                                         <div
                                                             className="hidden sm:inline-block rounded-md bg-light-900 hover:bg-light-800 cursor-pointer"
                                                             onClick={() => {
@@ -220,25 +222,25 @@ function AppBar(): JSX.Element {
                                                                 switch (chainId) {
                                                                     case ChainId.MAINNET:
                                                                         address =
-                                                                            '0x6B3595068778DD592e39A122f4f5a5cF09C90fE2'
+                                                                            '0x374CB8C27130E2c9E04F44303f3c8351B9De61C1'
                                                                         break
                                                                     case ChainId.BSC:
                                                                         address =
-                                                                            '0x947950BcC74888a40Ffa2593C5798F11Fc9124C4'
+                                                                            '0x47eaf5f54d79d5c2b6537a90a0c58a534ab51c8c'
                                                                         break
-                                                                    case ChainId.MATIC:
+                                                                    case ChainId.XDAI:
                                                                         address =
-                                                                            '0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a'
+                                                                            '0x82dFe19164729949fD66Da1a37BC70dD6c4746ce'
                                                                         break
                                                                 }
                                                                 const params: any = {
                                                                     type: 'ERC20',
                                                                     options: {
                                                                         address: address,
-                                                                        symbol: 'SUSHI',
+                                                                        symbol: 'BAO',
                                                                         decimals: 18,
                                                                         image:
-                                                                            'https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/ethereum/assets/0x6B3595068778DD592e39A122f4f5a5cF09C90fE2/logo.png'
+                                                                            'https://raw.githubusercontent.com/baofinance/assets/master/blockchains/ethereum/assets/0x374CB8C27130E2c9E04F44303f3c8351B9De61C1/logo.png'
                                                                     }
                                                                 }
 
@@ -255,7 +257,7 @@ function AppBar(): JSX.Element {
                                                                         .then(success => {
                                                                             if (success) {
                                                                                 console.log(
-                                                                                    'Successfully added SUSHI to MetaMask'
+                                                                                    'Successfully added BAO to MetaMask'
                                                                                 )
                                                                             } else {
                                                                                 throw new Error('Something went wrong.')
@@ -266,7 +268,65 @@ function AppBar(): JSX.Element {
                                                             }}
                                                         >
                                                             <img
-                                                                src={`${process.env.PUBLIC_URL}/images/tokens/sushi-square.jpg`}
+                                                                src={baoSquare}
+                                                                alt="Switch Network"
+                                                                style={{
+                                                                    minWidth: 36,
+                                                                    minHeight: 36,
+                                                                    maxWidth: 36,
+                                                                    maxHeight: 36
+                                                                }}
+                                                                className="rounded-md object-contain"
+                                                            />
+                                                        </div>
+                                                    </QuestionHelper>
+                                                    <QuestionHelper text={i18n._(t`Add Bao.cx to your Metamask wallet`)}>
+                                                        <div
+                                                            className="hidden sm:inline-block rounded-md bg-light-900 hover:bg-light-800 cursor-pointer"
+                                                            onClick={() => {
+                                                                let address: string | undefined
+                                                                switch (chainId) {
+                                                                    case ChainId.XDAI:
+                                                                        address =
+                                                                            '0xe0d0b1DBbCF3dd5CAc67edaf9243863Fd70745DA'
+                                                                        break
+                                                                }
+                                                                const params: any = {
+                                                                    type: 'ERC20',
+                                                                    options: {
+                                                                        address: address,
+                                                                        symbol: 'BAO.cx',
+                                                                        decimals: 18,
+                                                                        image:
+                                                                            'https://raw.githubusercontent.com/baofinance/assets/master/blockchains/ethereum/assets/0x374CB8C27130E2c9E04F44303f3c8351B9De61C1/logo.png'
+                                                                    }
+                                                                }
+
+                                                                if (
+                                                                    library &&
+                                                                    library.provider.isMetaMask &&
+                                                                    library.provider.request
+                                                                ) {
+                                                                    library.provider
+                                                                        .request({
+                                                                            method: 'wallet_watchAsset',
+                                                                            params
+                                                                        })
+                                                                        .then(success => {
+                                                                            if (success) {
+                                                                                console.log(
+                                                                                    'Successfully added BAO.cx to MetaMask'
+                                                                                )
+                                                                            } else {
+                                                                                throw new Error('Something went wrong.')
+                                                                            }
+                                                                        })
+                                                                        .catch(console.error)
+                                                                }
+                                                            }}
+                                                        >
+                                                            <img
+                                                                src={baoCxSquare}
                                                                 alt="Switch Network"
                                                                 style={{
                                                                     minWidth: 36,

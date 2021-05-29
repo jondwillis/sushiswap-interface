@@ -10,10 +10,11 @@ import { RowBetween } from '../Row'
 const InputPanel = styled.div`
     ${({ theme }) => theme.flexColumnNoWrap}
     position: relative;
-    border-radius: 1.25rem;
-    background-color: ${({ theme }) => theme.bg1};
+    border-radius: 0.625rem;
+    background-color: #e1d6cf;
     z-index: 1;
     width: 100%;
+    box-shadow: #a79e99 0px 0px 1px inset;
 `
 
 const ContainerRow = styled.div<{ error: boolean }>`
@@ -24,8 +25,8 @@ const ContainerRow = styled.div<{ error: boolean }>`
     border: 1px solid ${({ error, theme }) => (error ? theme.red1 : theme.bg2)};
     transition: border-color 300ms ${({ error }) => (error ? 'step-end' : 'step-start')},
         color 500ms ${({ error }) => (error ? 'step-end' : 'step-start')};
-    background-color: ${({ theme }) => theme.bg1};
-`
+        background-color: #e1d6cf;
+        `
 
 const InputContainer = styled.div`
     flex: 1;
@@ -38,7 +39,7 @@ const Input = styled.input<{ error?: boolean }>`
     border: none;
     flex: 1 1 auto;
     width: 0;
-    background-color: ${({ theme }) => theme.bg1};
+    background-color: #e1d6cf;
     transition: color 300ms ${({ error }) => (error ? 'step-end' : 'step-start')};
     color: ${({ error, theme }) => (error ? theme.red1 : theme.primary1)};
     overflow: hidden;

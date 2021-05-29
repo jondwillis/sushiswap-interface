@@ -46,25 +46,25 @@ const sheen = keyframes`{
 export const ButtonPrimary = styled(Base)`
   /* background-color: ${({ theme }) => theme.primary1}; */
   overflow:hidden;
-  background: linear-gradient(to right, #0094ec , #f537c3);
+  background: linear-gradient(to right, #ca6b00 , #50251c);
   background-origin: border-box;
   color: white;
   &:focus {
     box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.05, theme.primary1)};
     /*background: ${({ theme }) => darken(0.05, theme.primary1)};*/
-    background: linear-gradient(to right, #0094ec , #f537c3);
+    background: linear-gradient(to right, #ca6b00 , #50251c);
   }
   &:active {
     box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.1, theme.primary1)};
     /*background: ${({ theme }) => darken(0.1, theme.primary1)};*/
-    background: linear-gradient(to right, #0094ec , #f537c3);
+    background: linear-gradient(to right, #ca6b00 , #50251c);
   }
   &:disabled {
     pointer-events: none;
     background: ${({ theme, altDisabledStyle, disabled }) =>
-        altDisabledStyle ? (disabled ? theme.bg3 : theme.primary1) : theme.bg3};
+        altDisabledStyle ? (disabled ? theme.bg3 : theme.primary1) : theme.bg2};
     color: ${({ theme, altDisabledStyle, disabled }) =>
-        altDisabledStyle ? (disabled ? theme.text3 : 'white') : theme.text3};
+        altDisabledStyle ? (disabled ? theme.text1 : 'white') : theme.text1};
     cursor: auto;
     box-shadow: none;
     border: 1px solid transparent;
@@ -73,7 +73,7 @@ export const ButtonPrimary = styled(Base)`
   }
   &:hover {
     /*background: ${({ theme }) => darken(0.05, theme.primary1)};*/
-    background: linear-gradient(to right, #0094ec , #f537c3);
+    background: linear-gradient(to right, #ca6b00 , #50251c);
     background-origin: border-box;
     &::after {
       animation: ${sheen} 0.5s forwards;
@@ -120,10 +120,13 @@ export const ButtonPrimaryNormal = styled(Base)`
 `
 
 export const ButtonLight = styled(Base)`
-    background-color: ${({ theme }) => theme.primary5};
-    color: ${({ theme }) => theme.primaryText1};
+    background-color: ${({ theme }) => theme.bg2};
+    color: ${({ theme }) => theme.text3};
     font-size: 16px;
     font-weight: 500;
+    box-shadow: #a79e99 0px 0px 1px inset;
+    border-radius: ${({ theme }) => theme.borderRadius};
+    border: 1px solid rgb(226, 214, 207);
     &:focus {
         box-shadow: 0 0 0 1pt ${({ theme, disabled }) => !disabled && darken(0.03, theme.primary5)};
         background-color: ${({ theme, disabled }) => !disabled && darken(0.03, theme.primary5)};
@@ -219,7 +222,7 @@ export const ButtonUNIGradient = styled(ButtonPrimary)`
     height: 36px;
     font-weight: 500;
     background-color: ${({ theme }) => theme.bg3};
-    background: radial-gradient(174.47% 188.91% at 1.84% 0%, #ff007a 0%, #0094ec 100%), #edeef2;
+    background: radial-gradient(174.47% 188.91% at 1.84% 0%, #ff007a 0%, #ca6b00 100%), #edeef2;
     width: fit-content;
     position: relative;
     cursor: pointer;

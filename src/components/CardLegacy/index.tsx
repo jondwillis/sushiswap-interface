@@ -28,7 +28,7 @@ export const DarkCard = styled(Card)`
     overflow: hidden;
     background-origin: border-box;
     position: relative;
-    background-color: rgba(181, 73, 229, 0.2);
+    background-color: #ce6509;
 
     &:hover {
         background-origin: border-box;
@@ -115,7 +115,7 @@ const BlueCardStyled = styled(Card)`
 export const BlueCard = ({ children, ...rest }: CardProps) => {
     return (
         <BlueCardStyled {...rest}>
-            <Text fontWeight={500} color="#0094ec">
+            <Text fontWeight={500} color="#ca6b00">
                 {children}
             </Text>
         </BlueCardStyled>
